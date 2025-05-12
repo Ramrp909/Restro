@@ -1,19 +1,19 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Home } from './Home'
+import Orders from './Orders'
 
-const App = ({playerone,playertwo}) => {
+
+const App = () => {
   return (
-    <div>
-      <h3>Playerone Details</h3>
-      <p>Name: {playerone.name} | {''} Score: {playerone.score}</p>
-      <h3>Playertwo Details</h3>
-      <p>Name:{playertwo.name} | {''} Score: {playertwo.score}</p>
-    </div>
+    <>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/orders' element={<Orders />}/>
+    </Routes>
+    </BrowserRouter>
+    </>
   )
 }
-const mapStateToProps = state => ({
-  playerone: state.playerone,
-  playertwo: state.playertwo
-})
-
-export default connect(mapStateToProps)(App);
+export default App
