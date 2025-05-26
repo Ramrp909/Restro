@@ -1,9 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import Header from './container/Header'
 
 const Orders = ({list}) => {
   return (
     <div>
+      <Header />
       <center>
                 {list.length > 0 ?
                 <div className="container">
