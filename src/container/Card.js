@@ -53,7 +53,7 @@ const Card = ({filter_data,table_number,addorder}) => {
                                 <img src={item.image} className='card-img-top' alt="food img"/>
                             <div className="card-body">
                                 <div className="card-title">{item.name}</div>
-                                <h2>{item.cuisine}</h2>
+                                <h2 className='text-lg text-green-900'>{item.cuisine}</h2>
                                 <button className='btn btn-success'>Rs.{item.caloriesPerServing}</button>
                                 <button className="btn btn-primary" onClick={()=>
                                     Handler(item.id,item.name,item.cuisine,item.image,item.caloriesPerServing,table_number)

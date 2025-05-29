@@ -1,9 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Header from './container/Header'
+import Login from './Login'
 
 const Orders = ({list}) => {
   return (
+    <>
     <div>
       <Header />
       <center>
@@ -30,6 +32,10 @@ const Orders = ({list}) => {
                 }
             </center>
     </div>
+    <div>
+      <Login />
+    </div>
+    </>
   )
 }
 const mapStateToProps = state =>({
